@@ -9,11 +9,7 @@ step 3: check if current value of i not equal to min index
 
 */
 
-
-
 const selection_sort = (arr) => {
-
-
     for (let i = 0; i < arr.length - 1; i++) {
         let min_index = i;
         for (let j = i + 1; j < arr.length; j++) {
@@ -31,5 +27,4 @@ const selection_sort = (arr) => {
 }
 
 const result = selection_sort([10, 5, 2, 8, 7]);
-
 console.log(result);
