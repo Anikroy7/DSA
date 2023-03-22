@@ -24,8 +24,7 @@ if middele index small to targeted index then
 if middle index big to targeted index then 
    firstIndex = middleIndex +1
   
-*/
-
+\
 
 
 const binarySearch = (arr, targetElement) => {

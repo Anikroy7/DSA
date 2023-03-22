@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>array insert</title>
+  </head>
+  <body>
+    <p>My array: [<span id="arrayfield"></span>]</p>
+    <input type="number" placeholder="Enter your postion" id="position" />
+    <input type="number" placeholder="Enter your number" id="number" />
+    <input onclick="handleInsert()" type="submit" />
+
+    <script>
+      //This is like splice method
+      const position = document.getElementById("position");
+      const newElement = document.getElementById("number");
+      const arrayfield = document.getElementById("arrayfield");
+      const array = [23, 56, 8, 9, 7, 56];
+      const handleInsert = () => {
+        console.log(parseInt(newElement.value));
+        for (let i = array.length - 1; i >= 0; i--) {
+          if (i >= parseInt(position.value)) {
+            array[i + 1] = array[i];
+            if (i == parseInt(position.value)) {
+              array[i] = parseInt(newElement.value);
+            }
+          }
+        }
+
+        arrayfield.innerText = array;
+        console.log(array);
+      };
+      arrayfield.innerText = array;
+    </script>
+  </body>
+</html>

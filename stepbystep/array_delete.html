@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>array delete</title>
+  </head>
+  <body>
+    <p>My array: [<span id="arrayfield"></span>]</p>
+    <input placeholder="give the deleted index" type="number" id="position" />
+    <input onclick="handledelete()" type="submit" />
+    <script>
+      const arrayfield = document.getElementById("arrayfield");
+      const position = document.getElementById("position");
+
+      const value = 0;
+      const array = [12, 56, 35, 98, 86, 72];
+
+      const handledelete = () => {
+        const value = parseInt(position.value);
+        console.log(value);
+        for (let i = value; i <= array.length - 1; i++) {
+          array[i] = array[i + 1];
+        }
+        array.length--;
+        arrayfield.innerText = array;
+      };
+      arrayfield.innerText = array;
+    </script>
+  </body>
+</html>
