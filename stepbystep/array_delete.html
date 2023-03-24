@@ -16,11 +16,12 @@
 
       const handledelete = () => {
         const value = parseInt(position.value);
-        console.log(value);
-        for (let i = value; i <= array.length - 1; i++) {
-          array[i] = array[i + 1];
+        if (!isNaN(value)) {
+          for (let i = value; i <= array.length - 1; i++) {
+            array[i] = array[i + 1];
+          }
+          array.length--;
         }
-        array.length--;
         arrayfield.innerText = array;
       };
       arrayfield.innerText = array;
