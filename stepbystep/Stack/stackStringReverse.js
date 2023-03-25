@@ -21,6 +21,7 @@ class Stack {
   }
 
   reverseString(value) {
+   if(typeof value ==='string'){
     const valueToArray = value.split("");
     const newStringArray = [];
 
@@ -34,15 +35,21 @@ class Stack {
     
     const newArrayToString = newStringArray.join("");
     console.log(newArrayToString);
-    const newStringToArray = newArrayToString.split("");
+/*     const newStringToArray = newArrayToString.split("");
     for (let i = newArrayToString.length-1; i>=0;  i--) {
         this.push(newStringToArray[i])
-    }
+    } */
+   }
   }
 }
 
 const stack = new Stack();
+stack.push('hello')
+stack.push('hello')
+stack.push('hello')
+stack.pop()
+stack.reverseString('anik')
 
-stack.reverseString("");
+stack.print()
 
 

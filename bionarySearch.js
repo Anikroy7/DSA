@@ -1,4 +1,4 @@
-//  This is a algorithm
+/* //  This is a algorithm
 
 // pheoudo code for this algoritm
 
@@ -23,8 +23,7 @@ if middele index small to targeted index then
 
 if middle index big to targeted index then 
    firstIndex = middleIndex +1
-  
-\
+ 
 
 
 const binarySearch = (arr, targetElement) => {
@@ -52,7 +51,7 @@ const binarySearch = (arr, targetElement) => {
 const findedIndex = binarySearch([1, 2, 3, 4], 4);
 
 // console.log(findedIndex);
-
+ */
 
 
 

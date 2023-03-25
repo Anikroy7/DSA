@@ -3,21 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA</title>
-    <style>
-        body {
-            background: #000;
-            color: white
-        }
-    </style>
 </head>
 
-<body>
-    <button>Night</button>
-    <button>Day</button>
+<body id="mainbody">
+    <button onclick="handleNight()" id="nightButton">Night</button>
+    <button onclick="handleDay()" id="dayButton">Day</button>
     <h1>Data Structurer And Algoritm<h1>
+        <script>
+            const night = document.getElementById('nightButton')
+            const day = document.getElementById('dayButton')
+            const body = document.getElementById('mainbody');
+            const handleDay=()=>{
+                body.style.background='white'
+                body.style.color='black'
+            }
+            const handleNight=()=>{
+                body.style.background='black'
+                body.style.color='white'
+            }
+        </script>
 
             <!-- <script src="/bionarySearch.js"></script>
         <script src="/selectionSort.js"></script> -->
@@ -27,9 +32,11 @@
      <!--        <script src="/stepbystep/arrayMergingAndReverse.js"></script> -->
      <!-- <script src="/stepbystep/Recursion/headAndTailRecursion.js"></script> -->
      <!-- <script src="/stepbystep/stack/stack.js"></script> -->
-     <script src="/stepbystep/stack/stackStringReverse.js"></script>
+     <!-- <script src="/stepbystep/stack/stackStringReverse.js"></script> -->
      <!-- <script src="/stepbystep/Recursion/indirectRecusion.js"></script> -->
-     <!-- <script src="/stepbystep/Recursion/Recursion.js"></script> -->
+     <!-- <script src="/stepbystep/Recursion/Recursion.js"></script> 
+    -->
+    <script src="/stepbystep/Queue/queue.js"></script>
 </body>
 
 </html>
