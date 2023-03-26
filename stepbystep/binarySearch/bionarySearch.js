@@ -53,5 +53,60 @@ const findedIndex = binarySearch([1, 2, 3, 4], 4);
 // console.log(findedIndex);
  */
 
+let arrOfObj =[]
+
+for(let i=0; i < 10000; i++){
+  arrOfObj[i]=i
+}
+// console.log(arrOfObj);
 
 
+
+
+
+/* console.time('linearSerach')
+
+const linearSerach = (arr, findedElement) => {
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]=== findedElement){
+      return i;
+    }
+  }
+
+};
+
+const index2 = linearSerach(
+  arrOfObj,
+  900
+);
+
+console.log(index2);
+console.timeEnd('linearSerach') */
+
+console.time('binarySearch')
+const binarySearch = (array, element) => {
+  let firstIndex = 0;
+  let lastIndex = array.length - 1;
+
+  while (true) {
+    const middleIndex = Math.round((firstIndex + lastIndex) / 2);
+    if (array[middleIndex] === element) {
+      return middleIndex;
+    }
+
+    if (element > array[middleIndex]) {
+      firstIndex = middleIndex;
+    } else {
+      lastIndex = middleIndex - 1;
+    }
+  }
+};
+
+const index = binarySearch(
+  arrOfObj,
+  900
+);
+
+console.log(index);
+
+console.timeEnd('binarySearch')
