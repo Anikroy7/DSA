@@ -39,10 +39,10 @@ class Linklist {
     let currentNode = this.head;
     const size = this.size;
     while (counter < size) {
-      currentNode = currentNode.next;
-      if (counter === index - 1) {
+      if (counter === index) {
         currentNode.value = value;
       }
+      currentNode = currentNode.next;
 
       counter++;
     }
@@ -56,12 +56,13 @@ class Linklist {
     let currentNode = this.head;
 
     while (counter < this.size) {
-      currentNode = currentNode.next;
-      if (counter >= index-1) {
-          if(currentNode?.value){
-            currentNode.value= currentNode?.next?.value
-          }
+      if (counter >= index) {
+  
+        if (currentNode?.value) {
+          currentNode.value = currentNode?.next?.value;
         }
+      }
+      currentNode = currentNode.next;
       counter++;
     }
     this.size--
@@ -75,11 +76,11 @@ linklist.push(400);
 linklist.push(500);
 linklist.push(600);
 console.log(linklist);
-// linklist.updateAt(1, 20);
-// linklist.updateAt(0, 30);
+/* linklist.updateAt(1, 20);
+linklist.updateAt(0, 30); */
 console.log(linklist.showAll());
-linklist.deleteAt(3)
+// linklist.deleteAt(1);
+linklist.deleteAt(0);
 console.log(linklist.showAll());
-linklist.deleteAt(30)
 
 console.log(linklist);
