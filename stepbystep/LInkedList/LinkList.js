@@ -47,6 +47,25 @@ class Linklist {
       counter++;
     }
   }
+
+  deleteAt(index) {
+    if (index > this.size - 1) {
+      throw new Error("Please provide a valid index!!");
+    }
+    let counter = 0;
+    let currentNode = this.head;
+
+    while (counter < this.size) {
+      currentNode = currentNode.next;
+      if (counter >= index-1) {
+          if(currentNode?.value){
+            currentNode.value= currentNode?.next?.value
+          }
+        }
+      counter++;
+    }
+    this.size--
+  }
 }
 
 const linklist = new Linklist(200);
@@ -54,8 +73,13 @@ const linklist = new Linklist(200);
 linklist.push(300);
 linklist.push(400);
 linklist.push(500);
-linklist.updateAt(1, 20);
-linklist.updateAt(60, 30);
+linklist.push(600);
+console.log(linklist);
+// linklist.updateAt(1, 20);
+// linklist.updateAt(0, 30);
 console.log(linklist.showAll());
+linklist.deleteAt(3)
+console.log(linklist.showAll());
+linklist.deleteAt(30)
 
 console.log(linklist);
