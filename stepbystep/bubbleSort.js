@@ -26,7 +26,6 @@ if current index is big then it would be last element to the last element
 const result = bubbleSort([10, 2, 5, 4]);
 
 console.log(result); */
-
 const array = [9, 6, 8, 7, 45, 78, 98, 65, 6, 1, 2];
 
 const bubbleSort = (array) => {
@@ -46,11 +45,7 @@ const result = bubbleSort(array);
 
 console.log(result);
 
-
-
 //assending order
-
-
 for (let i = 0; i < array.length; i++) {
   for (j = i + 1; j < array.length; j++) {
     if (array[j] < array[i]) {
@@ -61,13 +56,13 @@ for (let i = 0; i < array.length; i++) {
   }
 }
 
-console.log('assending',array);
+console.log("assending", array);
 
 //decending order
 
 // const array = [56, 20, 90, 47, 80, 3];
 
-for (let i = 0; i < array.length; i++) {
+/* for (let i = 0; i < array.length; i++) {
   for (let j = i + 1; j < array.length; j++) {
     if (array[i] < array[j]) {
       const temp = array[j];
@@ -77,4 +72,14 @@ for (let i = 0; i < array.length; i++) {
   }
 }
 
-console.log('decending',array);
+console.log('decending',array); */
+
+/* const newArray = [];
+
+for (let i = 1000; i>= 0; i--) {
+  if (i % 2 === 0) {
+    newArray.push(i);
+  }
+}
+
+console.log(newArray); */

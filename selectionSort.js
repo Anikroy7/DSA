@@ -9,6 +9,8 @@ step 3: check if current value of i not equal to min index
 
 */
 
+const array = [2, 2, 9, 6, 8, 6, 8, 6, 3];
+
 /* const selection_sort = (arr) => {
     for (let i = 0; i < arr.length - 1; i++) {
         let min_index = i;
@@ -26,9 +28,8 @@ step 3: check if current value of i not equal to min index
     return arr
 }
 
-const result = selection_sort([10, 5, 2, 8, 7]); */
+const result = selection_sort([10, 5, 2, 8, 7]);
 
-const array = [2, 8, 6, 3];
 //8,2,6,3
 
 for (let i = 0; i < array.length; i++) {
@@ -44,3 +45,12 @@ for (let i = 0; i < array.length; i++) {
 }
 
 console.log("selection sort", array);
+
+*/
+const obj = {};
+
+for (let v of array) {
+  obj[v] = (obj[v] || 0) + 1;
+}
+
+console.log(obj);
