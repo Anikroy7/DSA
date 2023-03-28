@@ -37,9 +37,23 @@ class BinarySearchTree {
     } else {
       if (root.left === null) {
         root.left = node;
-      }else{
-        this.insertTree(root.left, node)
+      } else {
+        this.insertTree(root.left, node);
       }
+    }
+  }
+
+  search(root, value) {
+    console.log('root', root);
+    if (root === null) {
+      return false;
+    }
+    if (root.value === value) {
+      return true;
+    } else if (value > root.value) {
+      return this.search(root.right, value);
+    } else {
+      return this.search(root.left, value);
     }
   }
 }
@@ -54,5 +68,7 @@ binarySearchTree.makeTree(40);
 binarySearchTree.makeTree(50);
 binarySearchTree.makeTree(60);
 binarySearchTree.makeTree(70);
+
+console.log(binarySearchTree.search(binarySearchTree.root, 63));
 
 console.log(binarySearchTree);
