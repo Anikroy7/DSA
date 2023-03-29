@@ -6,6 +6,8 @@ class Node {
   }
 }
 
+//using while loop
+/* 
 const depthFirstValues = (root) => {
   const stack = [root];
   while (stack.length > 0) {
@@ -15,6 +17,24 @@ const depthFirstValues = (root) => {
     if (current.left) stack.push(current.left);
     if (current.right) stack.push(current.right);
   }
+}; */
+
+/* 
+         a
+       /  \
+     b     c
+    / \     \
+   d   e     f
+*/
+
+//Using recursion function
+const depthFirstValues = (root) => {
+  if (root === null) return [];
+
+  const rightValue = depthFirstValues(root.right);
+  const leftValue = depthFirstValues(root.left);
+
+  return [root.value, ...rightValue, ...leftValue];
 };
 
 const a = new Node("a");
@@ -30,14 +50,6 @@ b.right = e;
 b.left = d;
 c.right = f;
 
-depthFirstValues(a)
-
-/* 
-         a
-       /  \
-     b     c
-    / \     \
-   d   e     f
-*/
+console.log(depthFirstValues(a));
 
 // console.log(a);
