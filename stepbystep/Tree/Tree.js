@@ -19,3 +19,6 @@ class Node {
   c.right = f;
 
 
+  const ami ='anik'
+
+

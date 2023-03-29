@@ -1,24 +1,3 @@
-// recursion way
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.right = null;
-    this.left = null;
-  }
-}
-const a = new Node(1);
-const b = new Node(2);
-const c = new Node(3);
-const d = new Node(4);
-const e = new Node(5);
-const f = new Node(6);
-
-a.right = c;
-a.left = b;
-b.right = e;
-b.left = d;
-c.right = f;
-
 /* const treeSum = (root) => {
   if (root === null) return 0;
   return root.value + treeSum(root.left) + treeSum(root.right);
