@@ -57,7 +57,6 @@ class Linklist {
 
     while (counter < this.size) {
       if (counter >= index) {
-  
         if (currentNode?.value) {
           currentNode.value = currentNode?.next?.value;
         }
@@ -65,8 +64,26 @@ class Linklist {
       currentNode = currentNode.next;
       counter++;
     }
-    this.size--
+    this.size--;
   }
+  sum() {
+    let sum = 0;
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      sum += current.value;
+      current = current.next;
+    }
+    return sum;
+  }
+  //recursive way
+  /*  sum(head, result) {
+    if (head === null) {
+      return result;
+    }
+    result += head.value;
+    return this.sum(head.next, result);
+  } */
 }
 
 const linklist = new Linklist(200);
@@ -75,12 +92,14 @@ linklist.push(300);
 linklist.push(400);
 linklist.push(500);
 linklist.push(600);
-console.log(linklist);
+// console.log(linklist);
 /* linklist.updateAt(1, 20);
 linklist.updateAt(0, 30); */
-console.log(linklist.showAll());
+// console.log(linklist.showAll());
 // linklist.deleteAt(1);
-linklist.deleteAt(0);
-console.log(linklist.showAll());
+// linklist.deleteAt(0);
+// console.log(linklist.showAll());
 
-console.log(linklist);
+// console.log(linklist);
+
+console.log(linklist.sum(linklist.head, 0));

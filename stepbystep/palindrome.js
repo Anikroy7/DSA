@@ -1,6 +1,6 @@
 // if any string fist to last same and last to first same then its called palindrome.
 
-const palindrome = (str) => {
+/* const palindrome = (str) => {
   let startIndex = 0;
   let lastIndex = str.length - 1;
   let result = true;
@@ -14,6 +14,19 @@ const palindrome = (str) => {
   return result;
 };
 
-const isPalindrome = palindrome("aavtdvaa");
+const isPalindrome = palindrome("aavtdvaa") */ //recursive way
 
-console.log(isPalindrome);
+const isPalindrome = (value) => {
+  let firstIndex = 0;
+  let lastIndex = value.length - 1;
+  if (value.length === 0 || value.length === 1) {
+    return true;
+  }
+
+  if (value[firstIndex] === value[lastIndex]) {
+    return isPalindrome(value.substring(1, value.length-1));
+  }
+  return false;
+};
+
+console.log(isPalindrome('racecar'));
