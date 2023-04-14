@@ -96,10 +96,14 @@ linklist.push(600);
 /* linklist.updateAt(1, 20);
 linklist.updateAt(0, 30); */
 // console.log(linklist.showAll());
-// linklist.deleteAt(1);
-// linklist.deleteAt(0);
-// console.log(linklist.showAll());
+linklist.deleteAt(1);
+linklist.deleteAt(0);
+linklist.deleteAt(0);
+linklist.deleteAt(0);
+linklist.deleteAt(0);
+console.log(linklist.showAll());
+console.log(linklist);
 
 // console.log(linklist);
 
-console.log(linklist.sum(linklist.head, 0));
+// console.log(linklist.sum(linklist.head, 0));

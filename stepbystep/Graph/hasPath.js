@@ -42,4 +42,4 @@ const hasPath = (graph, src, dst) => {
   return false;
 };
 
-console.log(hasPath(graph, 'a', 'f'));
+console.log(hasPath(graph, 'e', 'f'));
